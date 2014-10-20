@@ -1,0 +1,40 @@
+.top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: #ccc; /* so you can see it! */
+  z-index: 1000;
+  overflow: hidden;
+  transition: height 0.3s, top 0.3s;
+}
+
+/* second height for top-header - class is controlled by js */
+.small-header { height: 100px; }
+
+/* needs to be the same value as the top-header - class is controlled by js */
+.hide-small-header { top: -200px; }
+
+/* this is to offset the top-header height */
+body { padding-top:200px; }
+
+/******* only used for demo *******/
+html        { font-family: arial; line-height: 1.5; }
+.max-width  { max-width: 980px; margin: 0 auto; }
+main        { height:3000px; }
+
+.top-header h1 {
+  font-size:30px;
+  line-height: 150px;
+}
+
+.small-header h1 {
+  font-size:24px;
+  line-height: 50px;
+}
+
+.top-header h1,
+.small-header h1 {
+  transition: all 0.3s;
+}
