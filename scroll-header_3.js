@@ -1,18 +1,19 @@
 // This one is all singing all dancing!
 (function(){
-  var lastScrollTop = 0,
+  var didScroll,
+      lastScrollTop = 0,
       delta         = 5; // mouse wheel
 
   $(window).scroll(function() {
     didScroll = true;
   });
-
-  setInterval(function() {
-    if (didScroll) {
-      hasScrolled();
-      didScroll = false;
-    }
-  }, 250);
+  
+    setInterval(function() {
+      if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+      }
+    }, 250);
 
   function hasScrolled() {
     var scroll        = getCurrentScroll(),
